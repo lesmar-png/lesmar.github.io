@@ -43,6 +43,11 @@
   }
 }
     header img { height:180px; border-radius:21px; }
+
+@media (max-width: 768px) {
+  header img { height:100px; }
+}
+
     .catalogo{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;padding:20px;max-width:1200px;margin:0 auto;}
     .producto{background-color:#111;border:1px solid #d4af37;border-radius:12px;padding:10px;transition:transform .3s ease,box-shadow .3s ease;}
     .producto:hover{transform:scale(1.03);box-shadow:0 0 15px #d4af37;}
@@ -58,7 +63,7 @@
 </head>
 <body>
   <header class="encabezado">
-    <img src="Fotos_productos_con_precio/Logo.jpg" alt="Logo LESMAR" class="logo">
+    <img src="Foto de productos con precio/Logo.jpg" alt="Logo LESMAR" class="logo">
     <div>
       <h1>LESMAR</h1>
       <p>Donde la elegancia se encuentra</p>
@@ -75,40 +80,40 @@
 
   <script>
     const productos = [
-      { imagenes: ["Fotos_productos_con_precio/Producto1.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto2.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 85.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto3.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 55.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto4.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 45.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto5.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 65.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto6.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 45.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto7.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 65.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto8.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 45.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto9.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 50.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto10.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 70.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto11.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 65.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto12.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 65.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto13.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Aretes con dije.", precio:"Q. 75.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto14.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 75.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto15.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 65.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto16.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 35.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto17.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 45.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto18.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 40.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto19.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 35.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto20.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 40.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto21.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 40.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto22.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto23.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 40.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto24.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 50.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto25.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 45.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto26.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 40.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto27.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto28.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 40.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto29.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 40.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto30.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 50.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto31.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 35.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto32.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 35.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto33.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 40.00" },
-      { imagenes: ["Fotos_productos_con_precio/Producto34.jpg","Fotos_productos_con_precio/Producto1.2.jpg","Fotos_productos_con_precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 80.00" }
+      { imagenes: ["Foto de productos con precio/Producto1.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
+      { imagenes: ["Foto de productos con precio/Producto2.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 85.00" },
+      { imagenes: ["Foto de productos con precio/Producto3.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 55.00" },
+      { imagenes: ["Foto de productos con precio/Producto4.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 45.00" },
+      { imagenes: ["Foto de productos con precio/Producto5.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 65.00" },
+      { imagenes: ["Foto de productos con precio/Producto6.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 45.00" },
+      { imagenes: ["Foto de productos con precio/Producto7.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 65.00" },
+      { imagenes: ["Foto de productos con precio/Producto8.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 45.00" },
+      { imagenes: ["Foto de productos con precio/Producto9.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 50.00" },
+      { imagenes: ["Foto de productos con precio/Producto10.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 70.00" },
+      { imagenes: ["Foto de productos con precio/Producto11.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 65.00" },
+      { imagenes: ["Foto de productos con precio/Producto12.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 65.00" },
+      { imagenes: ["Foto de productos con precio/Producto13.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Aretes con dije.", precio:"Q. 75.00" },
+      { imagenes: ["Foto de productos con precio/Producto14.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 75.00" },
+      { imagenes: ["Foto de productos con precio/Producto15.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 65.00" },
+      { imagenes: ["Foto de productos con precio/Producto16.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 35.00" },
+      { imagenes: ["Foto de productos con precio/Producto17.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 45.00" },
+      { imagenes: ["Foto de productos con precio/Producto18.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 40.00" },
+      { imagenes: ["Foto de productos con precio/Producto19.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 35.00" },
+      { imagenes: ["Foto de productos con precio/Producto20.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 40.00" },
+      { imagenes: ["Foto de productos con precio/Producto21.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 40.00" },
+      { imagenes: ["Foto de productos con precio/Producto22.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
+      { imagenes: ["Foto de productos con precio/Producto23.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 40.00" },
+      { imagenes: ["Foto de productos con precio/Producto24.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 50.00" },
+      { imagenes: ["Foto de productos con precio/Producto25.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 45.00" },
+      { imagenes: ["Foto de productos con precio/Producto26.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 40.00" },
+      { imagenes: ["Foto de productos con precio/Producto27.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
+      { imagenes: ["Foto de productos con precio/Producto28.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 40.00" },
+      { imagenes: ["Foto de productos con precio/Producto29.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 40.00" },
+      { imagenes: ["Foto de productos con precio/Producto30.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 50.00" },
+      { imagenes: ["Foto de productos con precio/Producto31.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 35.00" },
+      { imagenes: ["Foto de productos con precio/Producto32.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 35.00" },
+      { imagenes: ["Foto de productos con precio/Producto33.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Collar dorado de diseño elegante.", precio:"Q. 40.00" },
+      { imagenes: ["Foto de productos con precio/Producto34.jpg","Foto de productos con precio/Producto1.2.jpg","Foto de productos con precio/Producto1.3.jpg"], descripcion:"Pulsera clásica de acero inoxidable.", precio:"Q. 80.00" }
     ];
 
     productos.sort(() => Math.random() - 0.5);
@@ -125,9 +130,3 @@
   </script>
 </body>
 </html>
-
-<style>
-@media (max-width: 768px) {
-  header img { height:100px; }
-}
-</style>
