@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+  <title>LESMAR | Donde la elegancia se encuentra</title>
+
+  <!-- 🌟 GLightbox para galería -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+  <style>
+
+.slogan {
+  font-family: 'Cinzel', serif !important;
+  font-size: 1.8em;
+  color: #d4af37;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+
+   body {
+  background: linear-gradient(135deg, #000000, #1a1a1a, #3a2c0f, #b8860b);
+  background-size: 400% 400%;
+  animation: fondoElegante 20s ease infinite;
+  color: #f5d77b;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+@keyframes fondoElegante {
+  0%   { background-position: 0% 50%; }
+  25%  { background-position: 50% 100%; }
+  50%  { background-position: 100% 50%; }
+  75%  { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+@keyframes fondoElegante {
+  0%   { background-position: 0% 50%; }
+  25%  { background-position: 50% 100%; }
+  50%  { background-position: 100% 50%; }
+  75%  { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+      background-color: #000;
+      color: #f5d77b;
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 10px;
+    }
+
+.encabezado {
+  display: flex;
+  align-items: center;      /* centra verticalmente logo y texto */
+  justify-content: center; /* los alinea a la izquierda */
+  gap: 20px;                /* espacio entre logo y slogan */
+  margin: 20px 40px;        /* margen desde los bordes */
+margin-top: 30px;
+  text-align: center;
+}
+.logo {
+  width: 250px;             /* ajusta el tamaño del logo */
+  height: 21;
+}
+
+    header img {
+      height: 250px;
+      border-radius: 21px;
+    }
+
+
+    .catalogo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .producto {
+      background-color: #111;
+      border: 1px solid #d4af37;
+      border-radius: 12px;
+      padding: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .producto:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px #d4af37;
+    }
+
+    .producto img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .descripcion {
+      margin-top: 10px;
+      font-size: 0.95em;
+      color: #f1e3a2;
+    }
+
+    .precio {
+      font-weight: bold;
+      color: #d4af37;
+      margin-top: 8px;
+    }
+
+    .boton {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #d4af37;
+      color: #000;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .boton:hover {
+      background-color: #f1e3a2;
+    }
+
+    footer {
+      margin: 30px 0;
+      font-size: 0.9em;
+      color: #d4af37;
+    }
+
+    /* 💬 Botón flotante de WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 28px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #25d366;
+    }
+
+    .whatsapp-float img {
+      width: 35px;
+      height: 35px;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+ <header class="encabezado">
+  <img src="Foto de productos con precio/Logo.jpg" alt="Logo LESMAR" class="Logo">
+<div>
+      <h1>LESMAR</h1>
+      <p>Donde la elegancia se encuentra</p>
+    </div>
+</header>
+
+
+  <section class="catalogo" id="catalogo"></section>
+
+  <footer>
+    © 2025 LESMAR Joyería — Todos los derechos reservados
+  </footer>
+
+  <!-- 💬 Botón flotante de WhatsApp -->
+  <a href="https://wa.me/50241801830?text=Hola%20quisiera%20hacer%20un%20pedido%20de%20LESMAR" 
+     class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+
+  <script>
+    const productos = [
+
+      { 
+imagenes: ["Foto de productos con precio/producto1.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], 
+descripcion: "Anillo de plata con incrustaciones finas.", 
+precio: "Q. 40.00" 
+},
+
+      { imagenes: ["Foto de productos con precio/producto2.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], 
+descripcion: "Collar dorado de diseño elegante.", 
+precio: "Q. 85.00" 
+},
+      { imagenes: ["Foto de productos con precio/producto3.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], 
+descripcion: "Pulsera clásica de acero inoxidable.", 
+precio: "Q. 55.00" 
+},
+      { imagenes: ["Foto de productos con precio/producto4.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"],
+descripcion: "Anillo de plata con incrustaciones finas.", 
+precio: "Q. 45.00" 
+},
+      { imagenes: ["Foto de productos con precio/producto5.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Collar dorado de diseño elegante.", precio: "Q. 65.00" },
+      { imagenes: ["Foto de productos con precio/producto6.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Pulsera clásica de acero inoxidable.", precio: "Q. 45.00" },
+      { imagenes: ["Foto de productos con precio/producto7.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Anillo de plata con incrustaciones finas.", precio: "Q. 65.00" },
+      { imagenes: ["Foto de productos con precio/producto8.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Collar dorado de diseño elegante.", precio: "Q. 45.00" },
+      { imagenes: ["Foto de productos con precio/producto9.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Pulsera clásica de acero inoxidable.", precio: "Q. 50.00" },
+      { imagenes: ["Foto de productos con precio/producto10.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Anillo de plata con incrustaciones finas.", precio: "Q. 70.00" },
+      { imagenes: ["Foto de productos con precio/producto11.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Collar dorado de diseño elegante.", precio: "Q. 65.00" },
+      { imagenes: ["Foto de productos con precio/producto12.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Pulsera clásica de acero inoxidable.", precio: "Q. 65.00" },
+      { imagenes: ["Foto de productos con precio/producto13.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Aretes con dije.", precio: "Q. 75.00" },
+      { imagenes: ["Foto de productos con precio/producto14.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Collar dorado de diseño elegante.", precio: "Q. 75.00" },
+      { imagenes: ["Foto de productos con precio/producto15.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Pulsera clásica de acero inoxidable.", precio: "Q. 65.00" },
+      { imagenes: ["Foto de productos con precio/producto16.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Anillo de plata con incrustaciones finas.", precio: "Q. 35.00" },
+      { imagenes: ["Foto de productos con precio/producto17.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Collar dorado de diseño elegante.", precio: "Q. 45.00" },
+      { imagenes: ["Foto de productos con precio/producto18.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Pulsera clásica de acero inoxidable.", precio: "Q40.00" },
+      { imagenes: ["Foto de productos con precio/producto19.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Anillo de plata con incrustaciones finas.", precio: "Q. 35.00" },
+      { imagenes: ["Foto de productos con precio/producto20.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Collar dorado de diseño elegante.", precio: "Q. 40.00" },
+      { imagenes: ["Foto de productos con precio/producto21.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Pulsera clásica de acero inoxidable.", precio: "Q. 40.00" },
+      { imagenes: ["Foto de productos con precio/producto22.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Anillo de plata con incrustaciones finas.", precio: "Q. 40.00" },
+      { imagenes: ["Foto de productos con precio/producto23.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Collar dorado de diseño elegante.", precio: "Q. 40.00" },
+      { imagenes: ["Foto de productos con precio/producto24.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Pulsera clásica de acero inoxidable.", precio: "Q. 50.00" },
+      { imagenes: ["Foto de productos con precio/producto25.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Collar dorado de diseño elegante.", precio: "Q. 45.00" },
+      { imagenes: ["Foto de productos con precio/producto26.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Pulsera clásica de acero inoxidable.", precio: "Q. 40.00" },
+      { imagenes: ["Foto de productos con precio/producto27.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Anillo de plata con incrustaciones finas.", precio: "Q. 40.00" },
+      { imagenes: ["Foto de productos con precio/producto28.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Collar dorado de diseño elegante.", precio: "Q. 40.00" },
+      { imagenes: ["Foto de productos con precio/producto29.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Pulsera clásica de acero inoxidable.", precio: "Q. 40.00" },
+      { imagenes: ["Foto de productos con precio/producto30.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Anillo de plata con incrustaciones finas.", precio: "Q. 50.00" },
+      { imagenes: ["Foto de productos con precio/producto31.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Collar dorado de diseño elegante.", precio: "Q. 35.00" },
+      { imagenes: ["Foto de productos con precio/producto32.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Pulsera clásica de acero inoxidable.", precio: "Q. 35.00" },
+      { imagenes: ["Foto de productos con precio/producto33.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Collar dorado de diseño elegante.", precio: "Q. 40.00" },
+      { imagenes: ["Foto de productos con precio/producto34.jpg", "Foto de productos con precio/Producto1.2.jpg", "Foto de productos con precio/Producto1.3.jpg"], descripcion: "Pulsera clásica de acero inoxidable.", precio: "Q. 80" },
+      // Agrega más productos aquí...
+    ];
+
+    // Mezclar aleatoriamente
+    productos.sort(() => Math.random() - 0.5);
+
+    const catalogo = document.getElementById("catalogo");
+
+    productos.forEach((p, index) => {
+      const grupo = "producto" + (index + 1);
+      const div = document.createElement("div");
+      div.className = "producto";
+
+      // Imagen principal (la primera del arreglo)
+      let contenido = `
+        <a href="${p.imagenes[0]}" class="glightbox" data-gallery="${grupo}">
+          <img src="${p.imagenes[0]}" alt="Producto ${index + 1}">
+        </a>
+      `;
+
+      // Imágenes adicionales (no visibles, pero forman parte de la galería)
+      for (let i = 1; i < p.imagenes.length; i++) {
+        contenido += `<a href="${p.imagenes[i]}" class="glightbox" data-gallery="${grupo}"></a>`;
+      }
+
+      contenido += `
+        <div class="descripcion">${p.descripcion}</div>
+        <div class="precio">${p.precio}</div>
+        <a class="boton" href="https://wa.me/50241801830?text=Hola%20deseo%20el%20producto%20${index + 1}" target="_blank">Hacer pedido</a>
+      `;
+
+      div.innerHTML = contenido;
+      catalogo.appendChild(div);
+    });
+
+    // Inicializar GLightbox
+    const lightbox = GLightbox({
+      touchNavigation: true,
+      loop: true,
+      zoomable: true
+    });
+  </script>
+</body>
+</html>
