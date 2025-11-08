@@ -77,17 +77,18 @@
     .descripcion { margin-top:10px; font-size: .95em; color:#f1e3a2; flex:0 0 auto; }
     .precio { font-weight:700; color: #d4af37; margin-top:8px; flex:0 0 auto; }
     .acciones { margin-top:12px; display:flex; gap:8px; align-items:center; }
-
-    .boton {
-      background: linear-gradient(90deg,#d4af37,#f0df9a);
-      color:#050505;
-      padding:10px 14px;
-      border-radius:10px;
-      text-decoration:none;
-      font-weight:700;
-      border:0;
-      display:inline-block;
-    }
+.boton {
+  display: block;
+  margin: 10px auto 0;
+  background-color: #d4af37;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background .3s ease;
+  width: fit-content;
+}
     .boton:hover { filter:brightness(0.98); transform:translateY(-2px); }
 
     footer { color:#d4af37; margin:24px 0 40px; font-size:0.9em; }
