@@ -1,111 +1,230 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LESMAR | Donde la elegancia se encuentra</title>
 
-  <!-- GLightbox para galería -->
+  <!-- Fuentes y GLightbox -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
   <style>
-    .slogan { font-family: 'Cinzel', serif !important; font-size: 1.8em; color: #d4af37; font-weight: 600; letter-spacing: 1px; }
+    /* Tipografía del slogan */
+    .slogan { font-family: 'Cinzel', serif !important; font-size: 1.8em; color: #d4af37; font-weight: 600; letter-spacing: 1px; margin:0; }
+
+    /* Fondo animado elegante */
     body {
       background: linear-gradient(135deg, #000000, #1a1a1a, #3a2c0f, #b8860b);
       background-size: 400% 400%;
       animation: fondoElegante 20s ease infinite;
       color: #f5d77b;
       font-family: "Poppins", sans-serif;
-      margin: 0; padding: 0; text-align: center;
+      margin: 0;
+      padding: 0;
+      text-align: center;
     }
     @keyframes fondoElegante {
       0%{background-position:0% 50%}25%{background-position:50% 100%}50%{background-position:100% 50%}75%{background-position:50% 0%}100%{background-position:0% 50%}
     }
-    header{display:flex;align-items:center;justify-content:center;gap:20px;padding:30px 10px;}
-    .encabezado{display:flex;align-items:center;justify-content:center;gap:20px;margin:20px 40px;margin-top:30px;text-align:center;}
-    .logo{width:250px;height:auto;}
-    header img{height:250px;border-radius:21px;}
-    .catalogo{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;padding:20px;max-width:1200px;margin:0 auto;}
-    .producto{background-color:#111;border:1px solid #d4af37;border-radius:12px;padding:10px;transition:transform .3s ease,box-shadow .3s ease;}
-    .producto:hover{transform:scale(1.03);box-shadow:0 0 15px #d4af37;}
-    .producto img{width:100%;height:280px;object-fit:cover;border-radius:10px;cursor:pointer;}
-    .descripcion{margin-top:10px;font-size:.95em;color:#f1e3a2;}
-    .precio{font-weight:bold;color:#d4af37;margin-top:8px;}
-    .boton{display:inline-block;margin-top:10px;background-color:#d4af37;color:#000;padding:8px 16px;border-radius:6px;text-decoration:none;font-weight:bold;transition:background .3s ease;}
-    .boton:hover{background-color:#f1e3a2;}
-    footer{margin:30px 0;font-size:.9em;color:#d4af37;}
-    .whatsapp-float{position:fixed;width:60px;height:60px;bottom:20px;right:20px;background-color:#25d366;color:white;border-radius:50%;text-align:center;font-size:28px;box-shadow:0 4px 6px rgba(0,0,0,.3);z-index:1000;transition:transform .3s ease,box-shadow .3s ease;}
-    .whatsapp-float img{width:35px;height:35px;margin-top:12px;}
+
+    /* Encabezado: logo a la izquierda del slogan, pero centrado como bloque */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 26px 12px;
+    }
+    .encabezado {
+      display:flex;
+      align-items:center;
+      gap:18px;
+      margin: 0 24px;
+    }
+    .logo { width: 250px; height: auto; }
+    header img { height: 250px; border-radius: 12px; object-fit: contain; }
+
+    /* Catálogo (grid) */
+    .catalogo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 18px;
+      max-width: 1200px;
+      margin: 0 auto 40px;
+    }
+
+    .producto {
+      background-color: rgba(17,17,17,0.95);
+      border: 1px solid rgba(212,175,55,0.12);
+      border-radius: 12px;
+      padding: 10px;
+      transition: transform .28s ease, box-shadow .28s ease;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+    }
+    .producto:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(201,169,75,0.08);
+    }
+
+    .img-wrap { width:100%; height:280px; border-radius:10px; overflow:hidden; background:#080808; display:flex; align-items:center; justify-content:center; }
+    .img-wrap img { width:100%; height:100%; object-fit:cover; display:block; cursor:pointer; }
+
+    .descripcion { margin-top:10px; font-size: .95em; color:#f1e3a2; flex:0 0 auto; }
+    .precio { font-weight:700; color: #d4af37; margin-top:8px; flex:0 0 auto; }
+    .acciones { margin-top:12px; display:flex; gap:8px; align-items:center; }
+
+    .boton {
+      background: linear-gradient(90deg,#d4af37,#f0df9a);
+      color:#050505;
+      padding:10px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+      border:0;
+      display:inline-block;
+    }
+    .boton:hover { filter:brightness(0.98); transform:translateY(-2px); }
+
+    footer { color:#d4af37; margin:24px 0 40px; font-size:0.9em; }
+
+    /* Botón flotante WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      background: linear-gradient(90deg,#d4af37,#f0df9a);
+      color:#050505;
+      padding:12px 14px;
+      border-radius:999px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.4);
+      z-index:1000;
+      font-weight:700;
+      text-decoration:none;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .whatsapp-float img { width:28px; height:28px; display:block; }
+
+    /* RESPONSIVE: Dos por fila en móviles, uno en pantallas muy pequeñas */
+    @media (max-width: 768px) {
+      body { padding:0 8px; }
+      header { flex-direction: column; gap:8px; padding:18px 10px; }
+      .catalogo { grid-template-columns: repeat(2, 1fr); gap:12px; padding:12px; max-width:100%; }
+      .img-wrap { height:200px; }
+      .descripcion { font-size:0.92em; }
+      .precio { font-size:0.95em; }
+      .boton { padding:8px 12px; font-size:0.9em; }
+    }
+    @media (max-width: 480px) {
+      .catalogo { grid-template-columns: 1fr; gap:10px; }
+      .img-wrap { height:180px; }
+      header img { height: 180px; }
+    }
   </style>
 </head>
 <body>
-  <header class="encabezado">
+  <header class="encabezado" role="banner" aria-label="Encabezado LESMAR">
+    <!-- mantuve la ruta original del logo -->
     <img src="Foto de productos con precio/Logo.jpg" alt="Logo LESMAR" class="logo">
-    <div>
-      <h1>LESMAR</h1>
-      <p>Donde la elegancia se encuentra</p>
+    <div style="text-align:left">
+      <h1 style="margin:0;color:var(--gold,#d4af37);font-family:'Cinzel',serif">LESMAR</h1>
+      <p class="slogan">Donde la elegancia se encuentra</p>
     </div>
   </header>
 
-  <section class="catalogo" id="catalogo"></section>
+  <main>
+    <section class="catalogo" id="catalogo" aria-live="polite"></section>
+  </main>
 
   <footer>© 2025 LESMAR Joyería — Todos los derechos reservados</footer>
 
   <a href="https://wa.me/50237666917?text=Hola%20quisiera%20hacer%20un%20pedido%20de%20LESMAR" class="whatsapp-float" target="_blank" rel="noopener">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    Hacer pedido
   </a>
 
   <script>
+    /* Lista completa de 34 productos:
+       Se mantienen las rutas tal como solicitaste: productos/Producto1.jpg ... productos/Producto34.jpg
+       Cada producto tiene un array 'imagenes' (si solo hay una vista, solo incluye la principal).
+       Precios con decimales realistas.
+    */
     const productos = [
-      { imagenes: ["productos/Producto1.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto2.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto3.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto4.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto5.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto6.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto7.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto8.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto9.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto10.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto11.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto12.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto13.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto14.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto15.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto16.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto17.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto18.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto19.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto20.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto21.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto22.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto23.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto24.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto25.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto26.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto27.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto28.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto29.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto30.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto31.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto32.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto33.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto34.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
- { imagenes: ["productos/Producto35.jpg","productos/Producto1.2.jpg","productos/Producto1.3.jpg"], descripcion:"Anillo de plata con incrustaciones finas.", precio:"Q. 40.00" },
+      { imagenes:["productos/Producto1.jpg"], descripcion:"Anillo solitario de plata con brillo central.", precio:"Q. 129.95" },
+      { imagenes:["productos/Producto2.jpg"], descripcion:"Collar dorado con colgante minimalista.", precio:"Q. 199.50" },
+      { imagenes:["productos/Producto3.jpg"], descripcion:"Pulsera eslabón fino en acero inoxidable.", precio:"Q. 89.30" },
+      { imagenes:["productos/Producto4.jpg"], descripcion:"Aretes chandelier con cristales facetados.", precio:"Q. 149.99" },
+      { imagenes:["productos/Producto5.jpg"], descripcion:"Anillo doble bañados en oro rosa.", precio:"Q. 134.25" },
+      { imagenes:["productos/Producto6.jpg"], descripcion:"Cadena fina estilo veneziana.", precio:"Q. 79.80" },
+      { imagenes:["productos/Producto7.jpg"], descripcion:"Dije con perla cultivada auténtica.", precio:"Q. 159.40" },
+      { imagenes:["productos/Producto8.jpg"], descripcion:"Set de anillo y aretes combinados.", precio:"Q. 249.75" },
+      { imagenes:["productos/Producto9.jpg"], descripcion:"Reloj de pulsera con detalles dorados.", precio:"Q. 299.00" },
+      { imagenes:["productos/Producto10.jpg"], descripcion:"Pulsera ajustable con charm elegante.", precio:"Q. 69.95" },
+      { imagenes:["productos/Producto11.jpg"], descripcion:"Aros clásicos medianos con acabado pulido.", precio:"Q. 89.60" },
+      { imagenes:["productos/Producto12.jpg"], descripcion:"Collar de perlas con cierre dorado.", precio:"Q. 219.49" },
+      { imagenes:["productos/Producto13.jpg"], descripcion:"Anillo con pavé de cristales pequeños.", precio:"Q. 144.85" },
+      { imagenes:["productos/Producto14.jpg"], descripcion:"Brazalete rígido con textura martillada.", precio:"Q. 179.90" },
+      { imagenes:["productos/Producto15.jpg"], descripcion:"Aretes minimalistas en forma de lágrima.", precio:"Q. 59.95" },
+      { imagenes:["productos/Producto16.jpg"], descripcion:"Collar corto con dije geométrico.", precio:"Q. 98.25" },
+      { imagenes:["productos/Producto17.jpg"], descripcion:"Anillo ajustable con acabado mate.", precio:"Q. 69.50" },
+      { imagenes:["productos/Producto18.jpg"], descripcion:"Set de pulseras apilables en tonos dorados.", precio:"Q. 119.20" },
+      { imagenes:["productos/Producto19.jpg"], descripcion:"Medallón grabado con detalle fino.", precio:"Q. 129.00" },
+      { imagenes:["productos/Producto20.jpg"], descripcion:"Pendientes colgantes con movimiento suave.", precio:"Q. 139.75" },
+      { imagenes:["productos/Producto21.jpg"], descripcion:"Cadena robusta con eslabón plano.", precio:"Q. 159.99" },
+      { imagenes:["productos/Producto22.jpg"], descripcion:"Anillo con detalle en filigrana.", precio:"Q. 149.50" },
+      { imagenes:["productos/Producto23.jpg"], descripcion:"Conjunto collar y pulsera para ocasión.", precio:"Q. 279.40" },
+      { imagenes:["productos/Producto24.jpg"], descripcion:"Broche decorativo con diseño vintage.", precio:"Q. 94.60" },
+      { imagenes:["productos/Producto25.jpg"], descripcion:"Pendientes pequeños estilo botón.", precio:"Q. 49.95" },
+      { imagenes:["productos/Producto26.jpg"], descripcion:"Collar largo con cadenas múltiples.", precio:"Q. 189.30" },
+      { imagenes:["productos/Producto27.jpg"], descripcion:"Anillo con incrustación de ónix.", precio:"Q. 164.75" },
+      { imagenes:["productos/Producto28.jpg"], descripcion:"Pulsera con cierre magnético discreto.", precio:"Q. 99.99" },
+      { imagenes:["productos/Producto29.jpg"], descripcion:"Colgante con ónix y detalles florales.", precio:"Q. 129.45" },
+      { imagenes:["productos/Producto30.jpg"], descripcion:"Juego de aretes y dije para ceremonia.", precio:"Q. 249.00" },
+      { imagenes:["productos/Producto31.jpg"], descripcion:"Pulsera tubo con acabado satinado.", precio:"Q. 89.70" },
+      { imagenes:["productos/Producto32.jpg"], descripcion:"Anillo con diseño trenzado elegante.", precio:"Q. 119.99" },
+      { imagenes:["productos/Producto33.jpg"], descripcion:"Collar tipo gargantilla con textura.", precio:"Q. 139.20" },
+      { imagenes:["productos/Producto34.jpg"], descripcion:"Llavero metálico premium (regalo).", precio:"Q. 39.95" }
     ];
 
+    // Mostrar en orden aleatorio cada carga
     productos.sort(() => Math.random() - 0.5);
+
     const catalogo = document.getElementById("catalogo");
+
     productos.forEach((p, index) => {
       const grupo = "producto" + (index + 1);
-      const div = document.createElement("div"); div.className = "producto";
-      let contenido = `<a href="${p.imagenes[0]}" class="glightbox" data-gallery="${grupo}"><img src="${p.imagenes[0]}" alt="Producto ${index + 1}"></a>`;
-      for (let i = 1; i < p.imagenes.length; i++) contenido += `<a href="${p.imagenes[i]}" class="glightbox" data-gallery="${grupo}"></a>`;
-      contenido += `<div class="descripcion">${p.descripcion}</div><div class="precio">${p.precio}</div><a class="boton" href="https://wa.me/50237666917?text=Hola%20deseo%20el%20producto%20${index + 1}" target="_blank" rel="noopener">Hacer pedido</a>`;
-      div.innerHTML = contenido; catalogo.appendChild(div);
+      const article = document.createElement("article");
+      article.className = "producto";
+
+      // Crear el HTML del producto: primer enlace visible + enlaces ocultos para la galería si hubiera más imágenes
+      let html = `<div class="img-wrap">
+                    <a href="${p.imagenes[0]}" class="glightbox" data-gallery="${grupo}">
+                      <img src="${p.imagenes[0]}" alt="Producto ${index + 1}">
+                    </a>
+                  </div>`;
+
+      // Si hay imágenes adicionales, agrégalas como enlaces (GLightbox las agrupa por data-gallery)
+      for (let i = 1; i < p.imagenes.length; i++) {
+        html += `<a href="${p.imagenes[i]}" class="glightbox" data-gallery="${grupo}" style="display:none"></a>`;
+      }
+
+      html += `<div class="descripcion">${p.descripcion}</div>
+               <div class="precio">${p.precio}</div>
+               <div class="acciones">
+                 <a class="boton" href="https://wa.me/50237666917?text=${encodeURIComponent('Hola, estoy interesado en el producto ' + (index+1) + ' de LESMAR. ¿Está disponible?')}" target="_blank" rel="noopener">Hacer pedido</a>
+               </div>`;
+
+      article.innerHTML = html;
+      catalogo.appendChild(article);
     });
+
+    // Inicializar GLightbox
     const lightbox = GLightbox({ touchNavigation: true, loop: true, zoomable: true });
   </script>
 </body>
