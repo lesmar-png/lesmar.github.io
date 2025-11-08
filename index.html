@@ -224,52 +224,26 @@
       catalogo.appendChild(article);
     });
 
-    // Inicializar GLightbox
-    const lightbox = GLightbox({ touchNavigation: true, loop: true, zoomable: true });
-  </script>
-<!-- Aviso elegante para abrir en Chrome -->
-<div id="aviso-navegador" style="
-  display:none;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  background:rgba(0,0,0,0.9);
-  color:#d4af37;
-  text-align:center;
-  padding:12px 8px;
-  font-family:'Cinzel',serif;
-  font-size:0.95em;
-  z-index:9999;
-  box-shadow:0 2px 6px rgba(0,0,0,0.5);
-  opacity:0;
-  transition:opacity 1s ease;
-">
-  💎 Para una mejor experiencia, abre este catálogo en <b>Google Chrome</b>
-  <a href="googlechrome://lesmar-png.github.io/lesmar.github.io" 
-     style="display:inline-block;margin-left:10px;
-     background-color:#d4af37;color:#000;
-     padding:5px 10px;border-radius:5px;
-     font-weight:bold;text-decoration:none;">
-     Abrir en Chrome
-  </a>
+      </script>
+<script>
+  const lightbox = GLightbox({ touchNavigation: true, loop: true, zoomable: true });
+</script>
+
+<!-- Aquí pegas el aviso -->
+<div id="aviso-navegador" style="display:none; position:fixed; top:0; ...">
+   💎 Para una mejor experiencia, abre este catálogo en <b>Google Chrome</b>
+   ...
 </div>
 
 <script>
-  // Detectar si el navegador es Chrome (excluyendo Edge u Opera)
   const esChrome = /chrome/i.test(navigator.userAgent) && !/edg|opr/i.test(navigator.userAgent);
-
   if (!esChrome) {
     const aviso = document.getElementById('aviso-navegador');
     aviso.style.display = 'block';
-    // Mostrar con efecto de aparición
     setTimeout(() => aviso.style.opacity = '1', 100);
-    // Ocultar después de 8 segundos
     setTimeout(() => aviso.style.opacity = '0', 8000);
-    // Remover del flujo del DOM después de desaparecer
     setTimeout(() => aviso.style.display = 'none', 9500);
   }
 </script>
-
 </body>
 </html>
