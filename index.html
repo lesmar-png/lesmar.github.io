@@ -130,7 +130,7 @@
     }
 
   @media (max-width: 480px) {
-      .catalogo { grid-template-columns: 1fr; gap:10px; }
+      .catalogo { grid-template-columns: 2fr; gap:10px; }
       .img-wrap { height:180px; }
       header img { height: 180px; }
     }
@@ -225,7 +225,7 @@
       html += `<div class="descripcion">${p.descripcion}</div>
                <div class="precio">${p.precio}</div>
                <div class="acciones">
-                 <a class="boton" href="https://wa.me/50237666917?text=${encodeURIComponent('Hola, estoy interesado en el producto ' + (index+1) + ' de LESMAR. ¿Está disponible?')}" target="_blank" rel="noopener">Hacer pedido</a>
+                <a class="boton" href="https://wa.me/50237666917?text=${encodeURIComponent('Hola, estoy interesado en este producto: ' + p.descripcion + '. ¿Está disponible?')}" target="_blank" rel="noopener">Hacer pedido</a>
                </div>`;
 
       article.innerHTML = html;
